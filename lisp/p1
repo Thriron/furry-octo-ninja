@@ -1,0 +1,10 @@
+(defun sum_of_mult (x)
+	(if (= x 3)
+		3
+		(if (or (= (mod x 3) 0) (= (mod x 5) 0))
+			(+ (print x) (sum_of_mult (- x 1)))
+			(sum_of_mult (- x 1)))))
+(defun sum_of_mult_less_than (x)
+	(sum_of_mult (- x 1)))
+
+(print (sum_of_mult_less_than 1000))
